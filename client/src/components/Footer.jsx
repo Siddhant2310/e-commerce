@@ -46,6 +46,48 @@ export default function Footer() {
           </div>
         </div>
       </div>
+      <div className="container-x relative border-t border-ivory/10 py-8">
+        <div className="grid gap-10 lg:grid-cols-2">
+          <div className="flex flex-col items-center gap-6 text-center sm:flex-row sm:text-left">
+            <img
+              src="/images/developer-photo.jpg"
+              alt="Siddhant Mishra, developer"
+              className="h-36 w-36 shrink-0 rounded-full border-4 border-gold/80 object-cover shadow-xl ring-4 ring-ivory/10 transition-transform duration-300 hover:scale-105 sm:h-40 sm:w-40"
+              onError={(event) => {
+                event.currentTarget.onerror = null;
+                event.currentTarget.src = "/images/developer-photo-placeholder.jpeg";
+              }}
+            />
+            <div>
+              <p className="text-xs uppercase tracking-[0.2em] text-gold">Meet the developer</p>
+              <h4 className="mt-1 font-display text-2xl">Siddhant Mishra</h4>
+              <p className="mt-1 text-sm text-ivory/70">Web developer based in Lucknow</p>
+              <p className="mt-2 max-w-xl text-sm leading-relaxed text-ivory/70">
+                From interactive interfaces to full-stack applications, I turn rough ideas into polished digital experiences.
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col items-center gap-6 text-center sm:flex-row sm:text-left">
+            <img
+              src="/images/partners-photo.jpg"
+              alt="Group photo of the Lucknowi Nazakat partners"
+              className="h-40 w-full max-w-60 shrink-0 rounded-xl border-4 border-gold/80 object-cover shadow-xl ring-4 ring-ivory/10 transition-transform duration-300 hover:scale-105 sm:h-48 sm:max-w-none sm:w-72"
+              onError={(event) => {
+                event.currentTarget.onerror = null;
+                event.currentTarget.src = "/images/partners-photo-placeholder.svg";
+              }}
+            />
+            <div>
+              <p className="text-xs uppercase tracking-[0.2em] text-gold">Our team</p>
+              <h4 className="mt-1 font-display text-2xl">The Partners</h4>
+              <p className="mt-1 text-sm text-ivory/70">Together behind Lucknowi Nazakat</p>
+              <p className="mt-2 max-w-xl text-sm leading-relaxed text-ivory/70">
+                A shared love for Lucknow's craft and culture brings our team together to create every piece with care.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="relative border-t border-ivory/10 py-5 text-center text-xs text-ivory/50">
         © {new Date().getFullYear()} Lucknowi Nazakat. All rights reserved.
       </div>
