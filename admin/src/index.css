@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ivory: #faf6ee;
+  --color-cream: #f3ecdd;
+  --color-sand: #e6d9bf;
+  --color-gold: #b8964e;
+  --color-forest: #1f3d2f;
+  --color-forest-dark: #162c22;
+  --color-maroon: #6e1f2e;
+  --color-maroon-dark: #531723;
+  --color-ink: #2a2622;
+  --font-display: "Cormorant Garamond", serif;
+  --font-sans: "Jost", system-ui, sans-serif;
+}
+
+body { font-family: var(--font-sans); background-color: var(--color-ivory); color: var(--color-ink); }
+h1, h2, h3 { font-family: var(--font-display); }
+:focus-visible { outline: 2px solid var(--color-gold); outline-offset: 2px; }
+
+@layer components {
+  .btn-primary { @apply inline-flex items-center justify-center gap-2 bg-forest text-ivory px-5 py-2.5 text-sm font-medium transition-colors hover:bg-forest-dark disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer; }
+  .btn-outline { @apply inline-flex items-center justify-center gap-2 border border-forest text-forest px-5 py-2.5 text-sm font-medium transition-colors hover:bg-forest hover:text-ivory disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer; }
+  .btn-danger { @apply inline-flex items-center justify-center gap-2 border border-maroon text-maroon px-3 py-1.5 text-sm transition-colors hover:bg-maroon hover:text-ivory disabled:opacity-50 cursor-pointer; }
+  .input { @apply w-full border border-sand bg-white/80 px-3.5 py-2.5 text-sm outline-none transition-colors focus:border-forest; }
+  .label { @apply mb-1 block text-sm font-medium text-ink/80; }
+  .field-error { @apply mt-1 text-xs text-maroon; }
+}
+@keyframes toast-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+.toast-in { animation: toast-in .25s ease both; }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
