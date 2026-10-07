@@ -36,11 +36,11 @@ export default function Footer() {
           <h4 className="font-display text-xl text-gold">Contact</h4>
           <ul className="mt-3 space-y-2 text-sm text-ivory/70">
             <li>Lucknow, Uttar Pradesh, India</li>
-            <li>support@lucknowinazakat.example</li>
-            <li>+91 00000 00000</li>
+            <li>siddhantmishrafzd@gmail.com</li>
+            <li>+916392286218</li>
           </ul>
           <div className="mt-4 flex gap-3 text-sm">
-            <a href="#" className={link}>Instagram</a>
+            <a href="https://www.instagram.com/be_happy_forever_2310?stkn=NHl0bjk4eGtidTVv" className={link}>Instagram</a>
             <a href="#" className={link}>Facebook</a>
             <a href="#" className={link}>Pinterest</a>
           </div>
